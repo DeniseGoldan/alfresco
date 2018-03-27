@@ -3,20 +3,23 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
 
-import { AppComponent } from './app.component';
-
+import { FavouriteItemsComponent } from './favourite-items.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    FavouriteItemsComponent,
+		CardComponent
   ],
   imports: [
     BrowserModule,
 		BrowserAnimationsModule,
-		MatCheckboxModule
+		MatCheckboxModule,
+		MatCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [FavouriteItemsComponent]
 })
-export class AppModule { }
+export class FavouriteItemsModule { }
