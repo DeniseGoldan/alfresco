@@ -12,7 +12,7 @@ export class DataRetrieverService {
 
 	constructor(private http: HttpClient) {}
 
-	public getEntriesArray(): Promise<any> {
+	public getEntriesBlocksArray(): Promise<any> {
 		return this.getResponseBody()
 		.then(responseBody => {return responseBody.list.entries})
 		.catch(error => {

@@ -1,4 +1,6 @@
 <mat-card>
-	<mat-card-title>{{favouriteItemTitle}}</mat-card-title>
-	<mat-card-content>{{itemType}}</mat-card-content>	
+	<mat-card-title>{{jsonBlock.entry.target.file.name}}</mat-card-title>
+	<mat-card-content>Is folder? {{jsonBlock.entry.target.file.isFolder}}</mat-card-content>
+	<mat-card-content>Is file? {{jsonBlock.entry.target.file.isFile}}</mat-card-content>
 </mat-card>
+<br>

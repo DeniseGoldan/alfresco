@@ -1,24 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 enum ItemType {
-  File = "file",
-  Directory = "directory",
+	File = "file",
+	Directory = "directory",
 }
 
 @Component({
-  selector: 'my-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+	selector: 'my-card',
+	templateUrl: './card.component.html',
+	styleUrls: ['./card.component.css']
 })
 
 export class CardComponent {
 
-	private favouriteItemTitle: string;
-	private itemType: ItemType;
-
-	constructor(){
-		this.favouriteItemTitle = "Name of the favourite resource";
-	 	this.itemType = ItemType.File;
-  }
+	@Input() private jsonBlock: any;
+	private itemTitle: string = "aaaaaaaa";
+	private itemType: ItemType = ItemType.File;
 
 }

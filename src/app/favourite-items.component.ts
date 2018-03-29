@@ -8,12 +8,17 @@ import { DataRetrieverService } from './data-retriever.service';
 })
 export class FavouriteItemsComponent implements OnInit {
 
+	private jsonEntriesBlocks: any;
+
 	constructor(private dataRetrieverService: DataRetrieverService) { }
 
 	ngOnInit(): void {
 		this.dataRetrieverService
-		.getEntriesArray()
-		.then(result => console.log(JSON.stringify(result)))
+		.getEntriesBlocksArray()
+		.then(result => {
+			this.jsonEntriesBlocks = result;
+			console.log(this.jsonEntriesBlocks);
+		})
 		.catch(error => console.log(JSON.stringify(error)));
 	}
 
