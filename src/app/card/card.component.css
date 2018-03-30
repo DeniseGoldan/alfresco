@@ -1,6 +1,7 @@
 .mat-card {
 	margin-bottom: 1em;
 	background-color: #F7E7CE;
+	padding: 1em;
 }
 
 .mat-card-title {

@@ -1,0 +1,12 @@
+.mat-card {
+	background-color: #FFF8E7;
+	margin: 3em;
+}
+
+.mat-card-title {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: #002E63;
+	font-size: 3em;
+	text-align: center;
+	font-weight: bold;
+}
