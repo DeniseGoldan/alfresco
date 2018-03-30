@@ -1,6 +1,16 @@
 <mat-card>
-	<mat-card-title>{{jsonBlock.entry.target.file.name}}</mat-card-title>
-	<mat-card-content>Is folder? {{jsonBlock.entry.target.file.isFolder}}</mat-card-content>
-	<mat-card-content>Is file? {{jsonBlock.entry.target.file.isFile}}</mat-card-content>
+	<div *ngIf="jsonBlock.entry.target.file">
+		<mat-card-header>
+			<img mat-card-avatar src="/assets/images/document_icon.png" alt="File">
+    		<mat-card-title>{{jsonBlock.entry.target.file.name}}</mat-card-title>
+			<mat-card-subtitle>Item type: <strong>file</strong></mat-card-subtitle>
+  		</mat-card-header>
+	</div>
+	<div *ngIf="jsonBlock.entry.target.folder">
+		<mat-card-header>
+			<img mat-card-avatar src="/assets/images/folder_icon.png" alt="Folder">
+    		<mat-card-title>{{jsonBlock.entry.target.folder.name}}</mat-card-title>
+			<mat-card-subtitle>Item type: <strong>folder</strong></mat-card-subtitle>
+  		</mat-card-header>
+	</div>
 </mat-card>
-<br>
