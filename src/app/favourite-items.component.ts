@@ -17,7 +17,6 @@ export class FavouriteItemsComponent implements OnInit {
 		.getFavouriteItemsArray()
 		.then(result => {
 			this.favouriteItems = result;
-			console.log(this.favouriteItems);
 		})
 		.catch(error => console.log(JSON.stringify(error)));
 	}

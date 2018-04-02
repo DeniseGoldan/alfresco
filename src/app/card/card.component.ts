@@ -9,6 +9,6 @@ import { FavouriteItem } from '../data-retriever.service';
 
 export class CardComponent {
 
-	@Input() private favouriteItem: FavouriteItem;
+	@Input() favouriteItem: FavouriteItem;
 
 }

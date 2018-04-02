@@ -1,9 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 
 import { FavouriteItemsComponent } from './favourite-items.component';
@@ -19,7 +17,6 @@ import { DataRetrieverService } from './data-retriever.service';
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
-		MatCheckboxModule,
 		MatCardModule,
 		HttpClientModule
 	],

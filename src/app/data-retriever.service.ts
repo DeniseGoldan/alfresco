@@ -6,8 +6,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export enum ItemType {
+
 	File = "file",
 	Folder = "folder"
+
 }
 
 export class FavouriteItem {
@@ -28,17 +30,6 @@ export class DataRetrieverService {
 	private endpointUrl: string = "https://s3.eu-west-2.amazonaws.com/alfresco-adf-app-test/favorites.json";
 
 	constructor(private http: HttpClient) {}
-
-	private getResponseBody(): Promise<any> {
-		return this.http.get(this.endpointUrl, {observe: "response"})
-		.toPromise()
-		.then(response => {
-			return response.body;
-		})
-		.catch(error => {
-			return error;
-		})
-	}
 
 	public getFavouriteItemsArray(): Promise<FavouriteItem[]> {
 		return this.getResponseBody()
@@ -64,5 +55,15 @@ export class DataRetrieverService {
 		})
 	}
 
+	private getResponseBody(): Promise<any> {
+		return this.http.get(this.endpointUrl, {observe: "response"})
+		.toPromise()
+		.then(response => {
+			return response.body;
+		})
+		.catch(error => {
+			return error;
+		})
+	}
 
 }
