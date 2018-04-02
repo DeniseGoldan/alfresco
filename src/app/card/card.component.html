@@ -1,15 +1,15 @@
 <mat-card>
-	<div *ngIf="jsonBlock.entry.target.file">
+	<div *ngIf="favouriteItem.type=='file'">
 		<mat-card-header>
 			<img mat-card-avatar src="/assets/images/document_icon.png" alt="File">
-    		<mat-card-title>{{jsonBlock.entry.target.file.name}}</mat-card-title>
+    		<mat-card-title>{{favouriteItem.name}}</mat-card-title>
 			<mat-card-subtitle>Item type: <strong>file</strong></mat-card-subtitle>
   		</mat-card-header>
 	</div>
-	<div *ngIf="jsonBlock.entry.target.folder">
+	<div *ngIf="favouriteItem.type=='folder'">
 		<mat-card-header>
 			<img mat-card-avatar src="/assets/images/folder_icon.png" alt="Folder">
-    		<mat-card-title>{{jsonBlock.entry.target.folder.name}}</mat-card-title>
+    		<mat-card-title>{{favouriteItem.name}}</mat-card-title>
 			<mat-card-subtitle>Item type: <strong>folder</strong></mat-card-subtitle>
   		</mat-card-header>
 	</div>

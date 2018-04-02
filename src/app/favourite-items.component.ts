@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataRetrieverService } from './data-retriever.service';
+import { FavouriteItem, DataRetrieverService } from './data-retriever.service';
 
 @Component({
 	selector: 'favourite-items',
@@ -8,16 +8,16 @@ import { DataRetrieverService } from './data-retriever.service';
 })
 export class FavouriteItemsComponent implements OnInit {
 
-	private jsonEntriesBlocks: any;
+	private favouriteItems: FavouriteItem[];
 
 	constructor(private dataRetrieverService: DataRetrieverService) { }
 
 	ngOnInit(): void {
 		this.dataRetrieverService
-		.getEntriesBlocksArray()
+		.getFavouriteItemsArray()
 		.then(result => {
-			this.jsonEntriesBlocks = result;
-			console.log(this.jsonEntriesBlocks);
+			this.favouriteItems = result;
+			console.log(this.favouriteItems);
 		})
 		.catch(error => console.log(JSON.stringify(error)));
 	}

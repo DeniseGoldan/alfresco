@@ -1,8 +1,8 @@
 <mat-card>
 	<mat-card-title>Your favourite files and folders</mat-card-title>
-	<div class="cards-container" *ngIf="jsonEntriesBlocks">
-		<div *ngFor="let jsonBlock of jsonEntriesBlocks">
-			<my-card [jsonBlock]="jsonBlock"></my-card>
+	<div class="cards-container" *ngIf="favouriteItems">
+		<div *ngFor="let favouriteItem of favouriteItems">
+			<my-card [favouriteItem]="favouriteItem"></my-card>
 		</div>
 	</div>
 </mat-card>

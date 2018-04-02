@@ -1,9 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-enum ItemType {
-	File = "file",
-	Directory = "directory",
-}
+import { FavouriteItem } from '../data-retriever.service';
 
 @Component({
 	selector: 'my-card',
@@ -13,8 +9,6 @@ enum ItemType {
 
 export class CardComponent {
 
-	@Input() private jsonBlock: any;
-	private itemTitle: string = "aaaaaaaa";
-	private itemType: ItemType = ItemType.File;
+	@Input() private favouriteItem: FavouriteItem;
 
 }
