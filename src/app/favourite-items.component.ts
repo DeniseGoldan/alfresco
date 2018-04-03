@@ -8,7 +8,7 @@ import { FavouriteItem, DataRetrieverService } from './data-retriever.service';
 })
 export class FavouriteItemsComponent implements OnInit {
 
-	private favouriteItems: FavouriteItem[];
+	favouriteItems: FavouriteItem[] = [];
 
 	constructor(private dataRetrieverService: DataRetrieverService) { }
 

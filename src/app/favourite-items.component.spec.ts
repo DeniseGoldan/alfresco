@@ -3,9 +3,7 @@ import { FavouriteItemsComponent } from './favourite-items.component';
 describe('FavouriteItemsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        FavouriteItemsComponent
-      ],
+      declarations: [ FavouriteItemsComponent ],
     }).compileComponents();
   }));
   // it('should create the app', async(() => {

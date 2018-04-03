@@ -10,7 +10,6 @@ import { MatCardModule } from '@angular/material/card';
 
 import { ItemType } from '../data-retriever.service';
 
-
 import { By } from "@angular/platform-browser";
 
 describe('CardComponent', () => {
@@ -27,7 +26,7 @@ describe('CardComponent', () => {
     		MatCardModule,
     		HttpClientModule
     	]
-    });
+    }).compileComponents();
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
   });
