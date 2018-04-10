@@ -6,14 +6,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export enum ItemType {
-
 	File = "file",
 	Folder = "folder"
-
 }
 
 export class FavouriteItem {
-
 	private name: string;
 	private type: string;
 
@@ -21,7 +18,6 @@ export class FavouriteItem {
 		this.name = name;
 		this.type = type;
 	}
-
 }
 
 @Injectable()
