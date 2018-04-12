@@ -33,24 +33,27 @@ describe('FavouriteItemsComponent', () => {
       ]
     });
     fixture = TestBed.createComponent(FavouriteItemsComponent);
-    service = fixture.debugElement.injector.get(DataRetrieverService);
   });
 
   it('should have "Your favourite files and folders" as title', async() => {
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('mat-card-title').innerHTML).toBe('Your favourite files and folders');
+    const nativeElement = fixture.debugElement.nativeElement;
+    expect(nativeElement.querySelector('mat-card-title').innerHTML).toBe('Your favourite files and folders');
   });
 
   it('should display two individual cards for the two given FavouriteItem instances', async() => {
     var firstItem = new FavouriteItem("A Newsletter January.docx", ItemType.File);
     var secondItem = 	new FavouriteItem("Another Newsletter February.docx", ItemType.File);
+
     var entriesToRender: FavouriteItem[] = [];
+
     entriesToRender.push(firstItem);
     entriesToRender.push(secondItem);
+
     fixture.componentInstance.favouriteItems = entriesToRender;
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.getElementsByTagName('my-card').length).toBe(2);
+  
+    const nativeElement = fixture.debugElement.nativeElement;
+    expect(nativeElement.getElementsByTagName('my-card').length).toBe(2);
   });
 
 });

@@ -32,6 +32,7 @@ export class DataRetrieverService {
 		.then(responseBody => {
 			var extractedEntries: FavouriteItem[] = [];
 			var currentItem: FavouriteItem;
+
 			responseBody.list.entries.forEach(function (element) {
 				if (element.entry.target.file) {
 					currentItem = new FavouriteItem(element.entry.target.file.name, ItemType.File);
@@ -40,22 +41,17 @@ export class DataRetrieverService {
 				}
 				extractedEntries.push(currentItem);
 			});
+
 			return extractedEntries;
 		})
-		.catch(error => {
-			return error;
-		})
+		.catch(error => { return error;	})
 	}
 
-	getResponseBody(): Promise<any> {
+	public getResponseBody(): Promise<any> {
 		return this.http.get(this.endpointUrl, {observe: "response"})
 		.toPromise()
-		.then(response => {
-			return response.body;
-		})
-		.catch(error => {
-			return error;
-		})
+		.then(response => { return response.body; })
+		.catch(error => {	return error;	})
 	}
 
 }

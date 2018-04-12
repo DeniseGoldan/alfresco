@@ -15,9 +15,7 @@ export class FavouriteItemsComponent implements OnInit {
 	ngOnInit(): void {
 		this.dataRetrieverService
 		.getFavouriteItemsArray()
-		.then(result => {
-			this.favouriteItems = result;
-		})
+		.then(result => { this.favouriteItems = result;	})
 		.catch(error => console.log(JSON.stringify(error)));
 	}
 

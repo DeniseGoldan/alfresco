@@ -23,4 +23,5 @@ import { DataRetrieverService } from './data-retriever.service';
 	providers: [ DataRetrieverService ],
 	bootstrap: [ FavouriteItemsComponent ]
 })
+
 export class FavouriteItemsModule { }
