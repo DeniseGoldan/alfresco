@@ -54,5 +54,22 @@ describe('CardComponent', () => {
     expect(element.querySelector('img').src).toContain("/assets/images/folder_icon.png");
   });
 
+  it('should display "Item type: file" when item type is file', () => {
+    var item = 	new FavouriteItem("MyFile.pdf", ItemType.File);
+    component.favouriteItem = item;
+    fixture.detectChanges();
+    let element = fixture.nativeElement;
+    expect(element.querySelector('mat-card-subtitle').innerHTML).toContain("Item type:");
+    expect(element.querySelector('mat-card-subtitle').innerHTML).toContain("file");
+  });
+
+  it('should display "Item type: folder" when item type is folder', () => {
+    var item = 	new FavouriteItem("MyFolder.pdf", ItemType.Folder);
+    component.favouriteItem = item;
+    fixture.detectChanges();
+    let element = fixture.nativeElement;
+    expect(element.querySelector('mat-card-subtitle').innerHTML).toContain("Item type:");
+    expect(element.querySelector('mat-card-subtitle').innerHTML).toContain("folder");
+  });
 
 });
