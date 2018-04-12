@@ -16,8 +16,6 @@ describe('FavouriteItemsComponent', () => {
   let fixture: ComponentFixture<FavouriteItemsComponent>;
   let component: FavouriteItemsComponent;
   let service: DataRetrieverService;
-  let object: any = { "list": {"entries": [{"entry": {"target": {"file": {"name": "Partner Newsletter Jan2018.docx"}}}} ] }};
-  let json : JSON = <JSON>this.object;
 
   beforeEach(async() => {
     TestBed.configureTestingModule({
